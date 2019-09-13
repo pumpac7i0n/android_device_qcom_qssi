@@ -1099,3 +1099,10 @@ PRODUCT_PACKAGES += libqti_vndfwk_detect
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
 PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
 PRODUCT_PACKAGES += libusb
+
+# Skip vendor/pa kernel.mk
+TARGET_PROVIDES_KERNEL_MAKEFILE := true
+
+# Include QC binaries
+-include vendor/qcom/common/qti-vendor.mk
+
