@@ -259,7 +259,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE:=true
 #----------------------------------------------------------------------
 # wlan specific
 #----------------------------------------------------------------------
-include device/qcom/wlan/msmnile/wlan.mk
+#include device/qcom/wlan/msmnile/wlan.mk
 
 TARGET_MOUNT_POINTS_SYMLINKS := false
 
@@ -276,6 +276,8 @@ AUDIO_FEATURE_ENABLED_DLKM := true
 else
 AUDIO_FEATURE_ENABLED_DLKM := false
 endif
+
+$(call inherit-product, vendor/vndk/vndk.mk)
 
 ###################################################################################
 # This is the End of target.mk file.
